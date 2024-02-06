@@ -1,6 +1,5 @@
 var express = require("express");
-var calculator = require("calculator");
-
+var calculator = require("./calculator");
 var app = express();
 var PORT = 8080;
 
@@ -12,7 +11,7 @@ app.get('/:operator/:num1/:num2', function(req,res){
     var result;
 
     if (operator == "sum") {
-        result =calculator.sum(num1, num2);
+        result = calculator.sum(num1, num2);
     }
 
     if (operator == "subtraction") {
@@ -28,10 +27,6 @@ app.get('/:operator/:num1/:num2', function(req,res){
     }
 
     res.json(result);
-});
-
-app.get("/", function(req, res){
-	res.send("hello! please type some math y'all")
 });
 
 //listener
