@@ -1,18 +1,22 @@
-module.exports = {
+function sum(a, b) {
+    return a + b;
+};
 
-    sum: function (a, b) {
-        return a + b;
-    },
+function subtraction(a, b) {
+    return a -b;
+};
 
-    subtraction: function (a, b) {
-        return a -b;
-    },
-
-    division: function (a, b) {
-        return a / b;
-    },
-
-    multiplication: function (a, b) {
-        return a * b;
-    }
+function division(a, b) {
+    return a / b;
 }
+
+function multiplication(a, b) {
+    return a * b;
+}
+
+module.exports = {
+    sum, 
+    subtraction,
+    division,
+    multiplication
+};
