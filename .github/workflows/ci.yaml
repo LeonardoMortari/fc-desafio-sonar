@@ -15,6 +15,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - run: yarn run test
+      
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
